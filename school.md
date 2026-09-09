@@ -72,7 +72,7 @@ permalink: /school/
 </div>
 
 <div class="card school-today">
-  <h3>📅 Today — August 11, 2026</h3>
+  <h3>📅 Today — September 9, 2026</h3>
   <p><strong>School Holiday</strong></p>
   <p>Today was a holiday, so I did not go to school.</p>
 </div>
