@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>404 • The Glitch Hunt 2027</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell" id="game">
+    <div class="scanlines"></div>
+    <header>
+      <span class="badge">404 • 2027</span>
+      <p class="status" id="status">SYSTEM STATUS: UNSTABLE</p>
+      <h1>THE GLITCH HUNT</h1>
+      <p class="intro">Something escaped the 404 page. Find and repair all <strong>7 glitches</strong> before the website breaks.</p>
+    </header>
+
+    <section class="console" aria-label="Glitch hunt game">
+      <div class="topbar">
+        <span>GLITCH SCANNER</span>
+        <span id="counter">0 / 7 FOUND</span>
+      </div>
+      <div class="glitch-zone" id="glitchZone">
+        <div class="fake-window">
+          <div class="window-bar"><span>yuvansh.info</span><span>● ● ●</span></div>
+          <div class="window-content">
+            <h2 id="brokenTitle">404 — Page Not Found</h2>
+            <p id="brokenText">The page you requested does not exist.</p>
+            <button id="suspiciousButton">Normal Button</button>
+            <div class="progress"><span id="progressBar"></span></div>
+            <p class="tiny-potato" id="potato">🥔</p>
+          </div>
+        </div>
+        <div class="cursor-follower" id="follower">Y</div>
+        <div class="repair-panel" id="repairPanel">
+          <span id="repairText">GLITCH DETECTED</span>
+          <button id="repairButton">R — REPAIR</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div><kbd>G</kbd><span>Activate scanner</span></div>
+      <div><kbd>R</kbd><span>Repair discovered glitch</span></div>
+      <div><kbd>SPACE</kbd><span>Restart scanner</span></div>
+    </section>
+
+    <div class="message" id="message">Press <strong>G</strong> to activate the scanner.</div>
+    <div class="achievement" id="achievement">🏆 GLITCH MASTER 2027</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
