@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>404 • Video Speed 11</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <section class="card">
+    <div class="top"><span class="badge">404 • 2026</span><span id="status">READY</span></div>
+    <h1>Video Speed <span>11</span></h1>
+    <p class="intro">This page wandered off. Turn your own video into the 404 game.</p>
+
+    <label class="upload" for="videoUpload">📹 Choose any video</label>
+    <input id="videoUpload" type="file" accept="video/*">
+    <p id="fileName" class="file">No video selected</p>
+
+    <div class="screen">
+      <video id="video" controls playsinline></video>
+      <div id="empty" class="empty">Upload a video to activate the game.</div>
+    </div>
+
+    <div class="stats">
+      <div><small>SPEED</small><strong id="speed">1×</strong></div>
+      <div><small>CYCLE</small><strong id="cycle">OFF</strong></div>
+      <div><small>ACHIEVEMENT</small><strong id="achievement">🔒 Locked</strong></div>
+    </div>
+
+    <div class="keys">
+      <div><kbd>SPACE</kbd><span>Start / stop cycle</span></div>
+      <div><kbd>S</kbd><span>Increase speed</span></div>
+      <button id="reset">Reset</button>
+    </div>
+    <p id="message" class="message">Choose a video, then press Space.</p>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
