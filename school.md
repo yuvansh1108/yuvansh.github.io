@@ -72,9 +72,9 @@ permalink: /school/
 </div>
 
 <div class="card school-today">
-  <h3>📅 Today — September 9, 2026</h3>
-  <p><strong>School Holiday</strong></p>
-  <p>Today was a holiday, so I did not go to school.</p>
+  <h3>📅 Today — September 10, 2026</h3>
+  <p><strong></strong></p>
+  <p>Today in English, I did a page in Learner's book, In Math, I had a Test and In EVS, my Teacher told my class about Subash Chandra Bose.</p>
 </div>
 
 <div class="previous-posts-box">
