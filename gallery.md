@@ -15,33 +15,16 @@ permalink: /gallery/
 </div>
 
 <div class="gallery-grid">
-  {% assign items = site.gallery | sort: "date" | reverse %}
-  {% for item in items %}
-    <a href="{{ item.url | relative_url }}" style="text-decoration:none;">
-      <div class="gallery-card">
-        <div class="gallery-thumb">
-          {% if item.image %}
-            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
-          {% elsif item.video_thumb %}
-            <img src="{{ item.video_thumb | relative_url }}" alt="{{ item.title }}">
-          {% else %}
-            <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:40px; opacity:0.15;">
-              🎥
-            </div>
-          {% endif %}
-        </div>
-        <div class="gallery-label">
-          <div class="gallery-label-title">{{ item.title }}</div>
-          <div class="gallery-label-meta">
-            {{ item.date | date: "%b %d, %Y" }}
-            {% if item.type %}
-              · <span class="chip">
-                {% if item.type == "video" %}🎥 Video{% else %}📷 Photo{% endif %}
-              </span>
-            {% endif %}
-          </div>
-        </div>
+  {% assign photos = "yuvansh.infopng1.png|yuvansh.infopng2.png|yuvansh.infopng3.png|yuvansh.infopng4.png|yuvansh.infopng5.png" | split: "|" %}
+  {% for photo in photos %}
+    <div class="gallery-card">
+      <div class="gallery-thumb">
+        <img src="{{ '/assets/gallery/' | append: photo | relative_url }}" alt="Gallery photo {{ forloop.index }}" loading="lazy">
       </div>
-    </a>
+      <div class="gallery-label">
+        <div class="gallery-label-title">Photo {{ forloop.index }}</div>
+        <div class="gallery-label-meta">📷 Photo</div>
+      </div>
+    </div>
   {% endfor %}
 </div>
