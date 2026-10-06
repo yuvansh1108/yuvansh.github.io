@@ -72,9 +72,9 @@ permalink: /school/
 </div>
 
 <div class="card school-today">
-  <h3>📅 Today — September 18, 2026</h3>
+  <h3>📅 Today — October 6, 2026</h3>
   <p><strong>Last day in school of the week</strong></p>
-  <p>Today in English, I did Creative Writing that i was in the park and In EVS, My class and I discussed  on cultural values.</p>
+  <p>Today in English, I read a new story, In EVS, I learnt more about Mammals and in Maths, I did true or false about a cube.</p>
 </div>
 
 <div class="previous-posts-box">
