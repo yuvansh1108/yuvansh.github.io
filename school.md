@@ -81,12 +81,7 @@ permalink: /school/
         {{ post.title }} — {{ post.date | date: "%B %d, %Y" }}
       </option>
     {% endfor %}
-  </select>
-
-  <button id="open-school-post" class="previous-posts-button" type="button">
-    Open selected post →
-  </button>
-</div>
+ 
 
 <div id="school-post-list">
   {% assign items = site.posts | where: "category", "school" | sort: "date" | reverse %}
