@@ -72,19 +72,11 @@ permalink: /school/
 </div>
 
 <div class="card school-today">
-  <h3>📅 Today — October 6, 2026</h3>
+  <h3>📅 Today — October 7, 2026</h3>
   <p><strong>Last day in school of the week</strong></p>
-  <p>Today in English, I read a new story, In EVS, I learnt more about Mammals and in Maths, I did true or false about a cube.</p>
+  <p>Today in English, I read yesterday's story again, In EVS, I did another page about mammals and in Maths, I did mental maths.</p>
 </div>
-
-<div class="previous-posts-box">
-  <h3>📚 Previous School Posts</h3>
-  <p>Choose a previous school post to open it.</p>
-
-  <select id="previous-school-post" class="previous-posts-select" aria-label="Choose a previous school post">
-    <option value="">Choose a post…</option>
-    {% assign items = site.posts | where: "category", "school" | sort: "date" | reverse %}
-    {% for post in items %}
+    
       <option value="{{ post.url | relative_url }}">
         {{ post.title }} — {{ post.date | date: "%B %d, %Y" }}
       </option>
