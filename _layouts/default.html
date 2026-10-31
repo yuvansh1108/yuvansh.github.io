@@ -11,15 +11,16 @@
     body::before{content:"Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y";position:fixed;inset:0;display:grid;place-items:center;font-size:clamp(3rem,10vw,8rem);font-weight:900;letter-spacing:.4em;color:rgba(96,165,250,.05);pointer-events:none;transform:rotate(-18deg);user-select:none;z-index:0;text-shadow:0 0 14px rgba(34,197,94,.12),0 0 24px rgba(56,189,248,.12);white-space:pre-wrap;line-height:1.8;padding:10vh 6vw;text-align:center}
     .nav-inner{max-width:1120px;margin:0 auto;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:2;flex-wrap:wrap}
     .brand{display:flex;flex-direction:column;gap:4px;min-width:0}
-    .brand-mark{display:inline-flex;align-items:center;justify-content:flex-start;min-height:34px;margin:0;font-size:1.35rem;font-weight:800;letter-spacing:.04em;line-height:1;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 18px rgba(56,189,248,.22);transition:font-size .22s ease,letter-spacing .22s ease,transform .22s ease;transform-origin:left center}
-    .brand-mark .brand-full,.brand-mark .brand-short{display:inline-block;transition:opacity .16s ease,transform .22s ease}
-    .brand-mark .brand-short{position:absolute;opacity:0;transform:translateY(5px) scale(.9);pointer-events:none}
+    .brand-mark{display:grid;grid-template-columns:1fr;align-items:center;justify-items:start;min-height:34px;margin:0;font-size:1.35rem;font-weight:800;letter-spacing:.04em;line-height:1;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 18px rgba(56,189,248,.22);transition:font-size .3s ease,letter-spacing .3s ease,transform .3s ease;transform-origin:left center}
+    .brand-mark .brand-full,.brand-mark .brand-short{grid-area:1/1;display:block;white-space:nowrap;transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1),filter .35s ease}
+    .brand-mark .brand-full{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+    .brand-mark .brand-short{opacity:0;transform:translateY(12px) scale(.82);filter:blur(5px);pointer-events:none}
     .brand-tagline{color:var(--text-muted);font-size:.9rem;transition:opacity .18s ease,max-height .22s ease}
     .site-header{position:sticky;top:0;z-index:20;background:rgba(5,15,28,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(96,165,250,.12);transition:background .2s ease,border-color .2s ease,box-shadow .2s ease}
     .site-header.is-scrolled{background:rgba(5,15,28,.92);border-color:rgba(56,189,248,.22);box-shadow:0 8px 28px rgba(0,0,0,.18)}
     .site-header.is-scrolled .brand-mark{font-size:1.55rem;letter-spacing:.08em;transform:scale(1.02)}
-    .site-header.is-scrolled .brand-mark .brand-full{opacity:0;transform:translateY(-5px);pointer-events:none}
-    .site-header.is-scrolled .brand-mark .brand-short{position:relative;opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+    .site-header.is-scrolled .brand-mark .brand-full{opacity:0;transform:translateY(-12px) scale(.9);filter:blur(5px);pointer-events:none}
+    .site-header.is-scrolled .brand-mark .brand-short{opacity:1;transform:translateY(0) scale(1);filter:blur(0);pointer-events:auto}
     .site-header.is-scrolled .brand-tagline{opacity:0;max-height:0;overflow:hidden}
     nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.nav-link{padding:9px 14px;border-radius:999px;text-decoration:none;color:#eff6ff;border:1px solid rgba(96,165,250,.22);background:linear-gradient(180deg,rgba(15,23,42,.92),rgba(7,18,32,.88));box-shadow:0 10px 30px rgba(0,0,0,.25);transition:.2s}.nav-link:hover{transform:translateY(-2px);border-color:rgba(34,197,94,.55)}main{max-width:1120px;margin:22px auto 20px;padding:22px;position:relative;z-index:1}main>*{background:var(--card-bg);border:1px solid var(--card-border);backdrop-filter:blur(16px);border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.28);padding:24px}a{color:#7dd3fc}a:hover{color:#86efac}h1,h2,h3{color:#fff}.secret-footer{text-align:center;padding:22px 14px 34px;position:relative;z-index:2}.secret-footer a{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:rgba(167,192,218,.35);text-decoration:none;letter-spacing:.22em;transition:.2s}.secret-footer a:hover{color:#7dd3fc;letter-spacing:.28em}
     @media(max-width:760px){.nav-inner{flex-direction:column;align-items:flex-start}nav{justify-content:flex-start}.site-header.is-scrolled .nav-inner{gap:8px}.site-header.is-scrolled nav{gap:6px}.site-header.is-scrolled .nav-link{padding:7px 10px}main{padding:14px}main>*{padding:18px;border-radius:20px}}
@@ -45,7 +46,7 @@
 (function(){
   const header=document.getElementById('site-header');
   if(!header)return;
-  const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>24);
+  const updateHeader=()=>header.classList.toggle('is-scrolled',window.scrollY>40);
   updateHeader();
   window.addEventListener('scroll',updateHeader,{passive:true});
 })();
